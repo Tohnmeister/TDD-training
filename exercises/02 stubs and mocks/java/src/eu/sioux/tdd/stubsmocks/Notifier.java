@@ -11,9 +11,9 @@ public class Notifier {
     }
 
     public void publish(String message) {
-        for (ResponseHandler responseHandler : responseHandlers) {
-            System.out.println("Notifying " + responseHandler.getName() + " with message: " + message);
-            responseHandler.receive(message);
+        for (ResponseHandler handler : responseHandlers) {
+            System.out.println("Notifying " + handler.getName() + " with message: " + message);
+            handler.receive(message);
         }
     }
 }

@@ -46,20 +46,20 @@ namespace My_First_Unit_Test
             switch (quart)
             {
                 case Quarters.Q1:
-                    startDate = new DateTime(year, 0, 1);
-                    endDate = new DateTime(year, 2, 31);
+                    startDate = new DateTime(year, 1, 1);
+                    endDate = new DateTime(year, 3, 31);
                     break;
                 case Quarters.Q2:
-                    startDate = new DateTime(year, 3, 1);
-                    endDate = new DateTime(year, 5, 30);
+                    startDate = new DateTime(year, 4, 1);
+                    endDate = new DateTime(year, 6, 30);
                     break;
                 case Quarters.Q3:
-                    startDate = new DateTime(year, 6, 1);
-                    endDate = new DateTime(year, 8, 30);
+                    startDate = new DateTime(year, 7, 1);
+                    endDate = new DateTime(year, 9, 30);
                     break;
                 case Quarters.Q4:
-                    startDate = new DateTime(year, 9, 1);
-                    endDate = new DateTime(year, 11, 31);
+                    startDate = new DateTime(year, 10, 1);
+                    endDate = new DateTime(year, 12, 31);
                     break;
             }
         }
@@ -69,16 +69,16 @@ namespace My_First_Unit_Test
             switch (type)
             {
                 case YearType.Start:
-                    startDate = new DateTime(year, 0, 1);
-                    endDate = new DateTime(year, 2, 31);
+                    startDate = new DateTime(year, 1, 1);
+                    endDate = new DateTime(year, 3, 31);
                     break;
                 case YearType.Halfway:
-                    startDate = new DateTime(year, 4, 1);
-                    endDate = new DateTime(year, 7, 31);
+                    startDate = new DateTime(year, 5, 1);
+                    endDate = new DateTime(year, 8, 31);
                     break;
                 case YearType.End:
-                    startDate = new DateTime(year, 8, 1);
-                    endDate = new DateTime(year, 11, 31);
+                    startDate = new DateTime(year, 9, 1);
+                    endDate = new DateTime(year, 12, 31);
                     break;
             }
         }

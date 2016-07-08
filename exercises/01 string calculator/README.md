@@ -1,6 +1,16 @@
 # String calculator #
 Build an application that calculates the sum of a string containing separated numbers.
 
+## Practical approach ##
+Do this exercise in a pair, and repeat the following cycle:
+- Person A takes the top most requirement from the list below and writes a failing unit test for it.
+- Person B implements the code so that the unit test succeeds.
+- If needed, person B can refactor the code after the test succeeds.
+- Now person B takes the second requirement and writes a failing unit test for it.
+- Person A implements the code so that all unit tests succeed.
+- If needed, person A can refactor the code again.
+- Repeat until all requirements are implemented.
+
 ## Requirements ##
 - An empty string returns zero
 - A single number returns the value

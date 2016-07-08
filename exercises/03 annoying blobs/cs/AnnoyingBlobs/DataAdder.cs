@@ -1,6 +1,6 @@
 ﻿namespace AnnoyingBlobs
 {
-    class DataAdder
+    public class DataAdder
     {
         public void DoSomeAdding()
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace My_First_Unit_Test
 {
-    public class MyFuzzyDate
+    public class FuzzyDate
     {
         private DateTime startDate;
         private DateTime endDate;
@@ -26,13 +26,13 @@ namespace My_First_Unit_Test
             End
         }
 
-        public MyFuzzyDate()
+        public FuzzyDate()
         {
             startDate = new DateTime(0);
             endDate = new DateTime(0);
         }
 
-        public MyFuzzyDate(string str)
+        public FuzzyDate(string str)
         {
             if (str == "now")
             {
@@ -41,7 +41,7 @@ namespace My_First_Unit_Test
             }
         }
 
-        public MyFuzzyDate(Quarters quart, int year)
+        public FuzzyDate(Quarters quart, int year)
         {
             switch (quart)
             {
@@ -64,7 +64,7 @@ namespace My_First_Unit_Test
             }
         }
 
-        public MyFuzzyDate(YearType type, int year)
+        public FuzzyDate(YearType type, int year)
         {
             switch (type)
             {

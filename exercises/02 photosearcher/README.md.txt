@@ -1,0 +1,2 @@
+# Photo Searcher #
+The goal of this exercise is to learn about isolating your subject under test. The class that needs testing in this example is PhotoSearcher. Like in real situations, this PhotoSearcher contains an algorithm for searching through a collection of photo's it receives through a PhotoProvider interface. 

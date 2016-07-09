@@ -13,7 +13,7 @@ namespace My_First_Unit_Test
             myDates = dates;
         }
 
-        public IList<DateTime> DatesAreMatching(MyFuzzyDate fuzzyDate)
+        public IList<DateTime> DatesAreMatching(FuzzyDate fuzzyDate)
         {
             var matches = myDates.Where(fuzzyDate.Contains).ToList();
 

@@ -1,8 +1,8 @@
-package eu.sioux.tdd.myfirst;
+package eu.sioux.tdd.photosearcher;
 
 import java.util.Date;
 
-public class MyFuzzyDate {
+public class FuzzyDate {
     public Date startDate;
     public Date endDate;
 
@@ -19,19 +19,19 @@ public class MyFuzzyDate {
         End
     }
 
-    public MyFuzzyDate() {
+    public FuzzyDate() {
         startDate = new Date(0);
         endDate = new Date(0);
     }
 
-    public MyFuzzyDate(String string) {
+    public FuzzyDate(String string) {
         if (string == "now") {
             startDate = new Date();
             endDate = new Date();
         }
     }
 
-    public MyFuzzyDate(Quarters quart, int year) {
+    public FuzzyDate(Quarters quart, int year) {
         switch (quart) {
             case Q1:
                 startDate = new Date(ConvertYear(year), 0, 1);
@@ -52,7 +52,7 @@ public class MyFuzzyDate {
         }
     }
 
-    public MyFuzzyDate(YearType type, int year) {
+    public FuzzyDate(YearType type, int year) {
         switch (type) {
             case Start:
                 startDate = new Date(ConvertYear(year), 0, 1);

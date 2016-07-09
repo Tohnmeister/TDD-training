@@ -12,7 +12,7 @@ public class MyDateMatcher {
         myDates = dates;
     }
 
-    public List<Date> DatesAreMatching(MyFuzzyDate fuzzyDate) {
+    public List<Date> DatesAreMatching(FuzzyDate fuzzyDate) {
         List<Date> matches = new ArrayList<>();
         matches.clear();
 

@@ -13,3 +13,5 @@ hs_err_pid*
 exercises/00 my first unit test/cs/My First Unit Test/obj/
 obj
 bin
+*.suo
+packages

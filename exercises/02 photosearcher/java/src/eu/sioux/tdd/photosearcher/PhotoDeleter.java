@@ -12,12 +12,12 @@ public class PhotoDeleter {
         this.photoRepository = photoRepository;
     }
 
-    public List<Photo> deletePhotos(FuzzyDate date) {
+    public void deletePhotos(FuzzyDate date) {
         // Use test-driven development to implement this method
         throw new NotImplementedException();
     }
 
-    public List<Photo> deletePhotos(Optional<FuzzyDate> fuzzyDate, Optional<Color> color, Optional<ContentType> contentType) {
+    public void deletePhotos(Optional<FuzzyDate> fuzzyDate, Optional<Color> color, Optional<ContentType> contentType) {
         // Use test-driven development to implement this method
         throw new NotImplementedException();
     }

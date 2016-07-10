@@ -44,8 +44,8 @@
     <Compile Include="ContentType.cs" />
     <Compile Include="FuzzyDate.cs" />
     <Compile Include="IPhoto.cs" />
-    <Compile Include="IPhotoProvider.cs" />
-    <Compile Include="PhotoSearcher.cs" />
+    <Compile Include="IPhotoRepository.cs" />
+    <Compile Include="PhotoDeleter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

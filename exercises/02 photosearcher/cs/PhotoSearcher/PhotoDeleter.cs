@@ -3,22 +3,22 @@ using System.Collections.Generic;
 
 namespace PhotoSearcher
 {
-    public class PhotoSearcher
+    public class PhotoDeleter
     {
-        private IPhotoProvider _provider;
+        private IPhotoRepository _photoRepository;
 
-        public PhotoSearcher(IPhotoProvider provider)
+        public PhotoDeleter(IPhotoRepository photoRepository)
         {
-            _provider = provider;
+            _photoRepository = photoRepository;
         }
 
-        public IList<IPhoto> SearchPhotos(FuzzyDate fuzzyDate)
+        public void DeletePhotos(FuzzyDate fuzzyDate)
         {
             // Use test-driven development to implement this method
             throw new NotImplementedException();
         }
 
-        public IList<IPhoto> SearchPhotos(FuzzyDate fuzzyDate, Color color, ContentType? contentType)
+        public void DeletePhotos(FuzzyDate fuzzyDate, Color color, ContentType? contentType)
         {
             // Use test-driven development to implement this method
             throw new NotImplementedException();

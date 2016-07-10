@@ -2,8 +2,9 @@
 
 namespace PhotoSearcher
 {
-    public interface IPhotoProvider
+    public interface IPhotoRepository
     {
         IList<IPhoto> GetPhotos();
+        void DeletePhotos(IList<int> ids);
     }
 }

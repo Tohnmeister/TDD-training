@@ -4,21 +4,20 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
-public class PhotoSearcher {
-    private final PhotoProvider provider;
+public class PhotoDeleter {
+    private final PhotoRepository photoRepository;
 
-    public PhotoSearcher(PhotoProvider provider) {
-        this.provider = provider;
+    public PhotoDeleter(PhotoRepository photoRepository) {
+        this.photoRepository = photoRepository;
     }
 
-    public List<Photo> searchPhotos(FuzzyDate date) {
+    public List<Photo> deletePhotos(FuzzyDate date) {
         // Use test-driven development to implement this method
         throw new NotImplementedException();
     }
 
-    public List<Photo> searchPhotos(Optional<FuzzyDate> fuzzyDate, Optional<Color> color, Optional<ContentType> contentType) {
+    public List<Photo> deletePhotos(Optional<FuzzyDate> fuzzyDate, Optional<Color> color, Optional<ContentType> contentType) {
         // Use test-driven development to implement this method
         throw new NotImplementedException();
     }

@@ -8,6 +8,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="org.mockito:mockito-all:1.10.19" level="project" />
+    <orderEntry type="library" name="junit-4.12-javadoc" level="project" />
+    <orderEntry type="library" name="mockito-all-1.10.19-javadoc" level="project" />
   </component>
 </module>

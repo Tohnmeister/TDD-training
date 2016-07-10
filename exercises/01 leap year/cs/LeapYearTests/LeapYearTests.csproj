@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{046B59E8-82AA-44E9-BF31-3518E2675C2E}</ProjectGuid>
+    <ProjectGuid>{93325689-C3B3-44D9-AD71-EBE8FCB83626}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AnnoyingBlobsTest</RootNamespace>
-    <AssemblyName>AnnoyingBlobsTest</AssemblyName>
+    <RootNamespace>LeapYearTests</RootNamespace>
+    <AssemblyName>LeapYearTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -56,15 +56,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DataBlobTest.cs" />
-    <Compile Include="DataAdderTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AnnoyingBlobs\AnnoyingBlobs.csproj">
-      <Project>{ccc532da-d693-46f6-ad51-6f78c38e0893}</Project>
-      <Name>AnnoyingBlobs</Name>
-    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -84,7 +84,7 @@ date::days FuzzyDate::getFuzzyRange() const
 	return sys_days(endDate) - sys_days(startDate);
 }
 
-bool FuzzyDate::contains(const date::year_month_day & lookupDate) const
+bool FuzzyDate::contains(const date::year_month_day& lookupDate) const
 {
 	return lookupDate >= startDate && lookupDate <= endDate;
 }

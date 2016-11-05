@@ -35,8 +35,8 @@ public:
 	bool contains(const date::year_month_day& lookupDate) const;
 
 private:
-	date::year_month_day startDate;
-	date::year_month_day endDate;
+	date::year_month_day _startDate;
+	date::year_month_day _endDate;
 
 };
 

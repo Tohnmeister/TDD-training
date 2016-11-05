@@ -45,9 +45,13 @@
   <ItemGroup>
     <ClInclude Include="date.h" />
     <ClInclude Include="FuzzyDate.h" />
+    <ClInclude Include="MyDateMatcher.h" />
+    <ClInclude Include="StrangeNumber.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FuzzyDate.cpp" />
+    <ClCompile Include="MyDateMatcher.cpp" />
+    <ClCompile Include="StrangeNumber.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

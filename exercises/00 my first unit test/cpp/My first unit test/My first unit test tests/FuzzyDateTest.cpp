@@ -1,49 +1,28 @@
-#include "FuzzyDate.h"
+#include <vector>
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
+#include "FuzzyDate.h"
+#include "MyDateMatcher.h"
+#include "date.h"
+
+using namespace std;
+using namespace date;
 
 class FuzzyDateTest : public ::testing::Test
 {
-protected:
-	virtual void SetUp()
-	{
-
-	}
-
-	virtual void TearDown()
-	{
-
-	}
 };
 
-TEST_F(FuzzyDateTest, testContains)
+TEST_F(FuzzyDateTest, exampleTest)
 {
-	EXPECT_TRUE(true);
-}
+	EXPECT_EQ(1, 1); // Expect that the 2nd value matches the 1st (expected) value.
+	ASSERT_EQ(1, 1); // Same as expect, but it stops the test run if not equal.
 
-class IFoo
-{
-public:
-	virtual ~IFoo() = 0 {}
+	EXPECT_NE(1, 2); // Expect that two values are not equal.
+	ASSERT_NE(1, 2); // Same, but stops the test run if equal.
 
-	virtual int getBar() const = 0;
-};
+	EXPECT_TRUE(1 == 1); // Expect that some condition is true.
+	ASSERT_TRUE(1 == 1); // Same, but stops the test run if condition is not met.
 
-class FooMock : public IFoo
-{
-public:
-	MOCK_CONST_METHOD0(getBar, int());
-
-};
-
-TEST(MockTest, testMock)
-{
-	using ::testing::Return;
-	using ::testing::Exactly;
-	FooMock fooMock;
-	ON_CALL(fooMock, getBar()).WillByDefault(Return(4));
-	EXPECT_CALL(fooMock, getBar()).Times(Exactly(1));
-
-	auto bar = fooMock.getBar();
-	EXPECT_EQ(4, bar);
+	EXPECT_FALSE(1 == 2); // Expect that some condition is false.
+	ASSERT_FALSE(1 == 2); // Same, but stops the test run if condition is met.
 }

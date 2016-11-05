@@ -21,9 +21,21 @@
     <ClInclude Include="date.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MyDateMatcher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StrangeNumber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FuzzyDate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyDateMatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StrangeNumber.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

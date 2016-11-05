@@ -6,6 +6,12 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StringCalculator.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StringCalculator.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D44C32A3-696A-43ED-8BC2-B12FAAA4C5D0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>

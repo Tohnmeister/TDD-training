@@ -10,8 +10,8 @@ struct IPhoto
 	virtual ~IPhoto() = 0 {}
 
 	virtual int getId() const = 0;
-	virtual date::year_month_day getDate() const = 0;
-	virtual Color getColor() const = 0;
+	virtual const date::year_month_day& getDate() const = 0;
+	virtual const Color& getColor() const = 0;
 	virtual ContentType getContentType() const = 0;
 };
 

@@ -7,7 +7,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="PhotoSearcherTest.cpp" />
+    <ClCompile Include="PhotoDeleterTest.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A877C7AC-8194-4BB7-9924-D044024699B7}</ProjectGuid>

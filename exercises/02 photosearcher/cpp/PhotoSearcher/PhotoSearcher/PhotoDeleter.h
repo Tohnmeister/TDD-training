@@ -4,21 +4,21 @@
 #include <memory>
 #include "ContentType.h"
 
-class IPhotoRepository;
+struct IPhotoRepository;
 class FuzzyDate;
 class Color;
 
 class PhotoDeleter
 {
 public:
-	PhotoDeleter(std::shared_ptr<IPhotoRepository> photoRepository);
+	PhotoDeleter(IPhotoRepository* photoRepository);
 	virtual ~PhotoDeleter();
 
 	void deletePhotos(const FuzzyDate& fuzzyDate);
 	void deletePhotos(const FuzzyDate& fuzzyDate, const Color& color, ContentType contentType);
 
 private:
-	std::shared_ptr<IPhotoRepository> _photoRepository;
+	IPhotoRepository* _photoRepository;
 
 };
 

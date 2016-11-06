@@ -22,15 +22,6 @@ public:
 	MOCK_METHOD1(deletePhotos, void(const std::vector<int>&));
 };
 
-class PhotoMock : public IPhoto
-{
-public:
-	MOCK_CONST_METHOD0(getId, int());
-	MOCK_CONST_METHOD0(getDate, const year_month_day&());
-	MOCK_CONST_METHOD0(getColor, const Color&());
-	MOCK_CONST_METHOD0(getContentType, ContentType());
-};
-
 class PhotoDeleterTest : public ::testing::Test
 {
 public:
@@ -42,37 +33,6 @@ public:
 private:
 
 };
-
-void initializePhotoMock(const PhotoMock& mock, int id, const year_month_day& date, const Color& color, ContentType contentType)
-{
-	ON_CALL(mock, getId()).WillByDefault(Return(id));
-	ON_CALL(mock, getDate()).WillByDefault(ReturnRef(date));
-	ON_CALL(mock, getColor()).WillByDefault(ReturnRef(color));
-	ON_CALL(mock, getContentType()).WillByDefault(Return(contentType));
-}
-
-TEST_F(PhotoDeleterTest, deletePhotosShouldDeletePhotosMatchingFuzzyDate)
-{
-	NiceMock<PhotoRepositoryMock> photoRepository;
-	PhotoDeleter photoDeleter(&photoRepository);
-	FuzzyDate fuzzyDate(Quarters::Q1, 2017);
-	Color black(0, 0, 0);
-	Color white(255, 255, 255);
-	NiceMock<PhotoMock> photo1;
-	initializePhotoMock(photo1, 1, year{ 2017 } / 4 / 1, white, ContentType::CARS);
-	NiceMock<PhotoMock> photo2;
-	initializePhotoMock(photo2, 2, year{ 2016 } / 3 / 1, white, ContentType::CARS);
-	NiceMock<PhotoMock> photo3;
-	initializePhotoMock(photo3, 3, year{ 2017 } / 3 / 1, white, ContentType::CARS);
-
-	vector<IPhoto*> allPhotos{ &photo1, &photo2, &photo3 };
-	ON_CALL(photoRepository, getPhotos()).WillByDefault(Return(allPhotos));
-
-	vector<int> expectedDeletedIds{ 3 };
-	EXPECT_CALL(photoRepository, deletePhotos(expectedDeletedIds)).Times(Exactly(1));
-
-	photoDeleter.deletePhotos(fuzzyDate);
-}
 
 TEST_F(PhotoDeleterTest, exampleTest)
 {

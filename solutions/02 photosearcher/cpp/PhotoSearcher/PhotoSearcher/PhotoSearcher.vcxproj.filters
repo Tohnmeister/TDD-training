@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="date.h" />
+    <ClInclude Include="FuzzyDate.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="ContentType.h" />
+    <ClInclude Include="IPhoto.h" />
+    <ClInclude Include="IPhotoRepository.h" />
+    <ClInclude Include="PhotoDeleter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FuzzyDate.cpp" />
+    <ClCompile Include="Color.cpp" />
+    <ClCompile Include="PhotoDeleter.cpp" />
+  </ItemGroup>
+</Project>

@@ -56,10 +56,8 @@ TEST_F(StringCalculatorTest, aMultiCharDelimiterCanBeDefinedOnTheFirstLine)
 
 TEST_F(StringCalculatorTest, manySingleOrMultiCharDelimitersCanBeDefined)
 {
-	EXPECT_EQ(6, StringCalculator::calculate("//[###][##]1###2##3"));
+	EXPECT_EQ(6, StringCalculator::calculate("//[###][$$]1###2$$3"));
 }
-
-//- Many single or multi - char delimiters can be defined, e.g. "//[###][$$]" for '###' and '$$' as the delimiter
 
 void throwException()
 {

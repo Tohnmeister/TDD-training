@@ -11,7 +11,7 @@ int StringCalculator::calculate(const std::string & str)
 	if (str.empty())
 		return 0;
 
-	string delim;
+	vector<string> delimiters;
 	string numberStr;
 	if (str.find("//") == 0)
 	{
@@ -24,28 +24,25 @@ int StringCalculator::calculate(const std::string & str)
 				string::size_type endDelimPos = remainingString.find(']');
 				string currDelim = remainingString.substr(1, endDelimPos - 1);
 				
-				if (!delim.empty())
-					delim += "|";
-
-				delim += currDelim;
+				delimiters.push_back(currDelim);
 				remainingString = remainingString.substr(endDelimPos + 1);
 			}
-			delim = "(" + delim + ")";
 			numberStr = remainingString;
 		}
 		else
 		{
-			delim = str[2];
+			delimiters.push_back(string(1, (str[2])));
 			numberStr = str.substr(3);
 		}
 	}
 	else
 	{
-		delim = "[,\n]";
+		delimiters.push_back(",");
+		delimiters.push_back("\n");
 		numberStr = str;
 	}
 
-	vector<string> strings = split(numberStr, delim);
+	vector<string> strings = split(numberStr, delimiters);
 	
 	int sum = 0;
 	for (auto it = strings.begin(); it != strings.end(); it++)

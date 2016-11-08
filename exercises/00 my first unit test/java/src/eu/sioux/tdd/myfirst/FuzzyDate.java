@@ -56,7 +56,7 @@ public class FuzzyDate {
         switch (type) {
             case Start:
                 startDate = new Date(ConvertYear(year), 0, 1);
-                endDate = new Date(ConvertYear(year), 2, 31);
+                endDate = new Date(ConvertYear(year), 3, 30);
                 break;
             case Halfway:
                 startDate = new Date(ConvertYear(year), 4, 1);

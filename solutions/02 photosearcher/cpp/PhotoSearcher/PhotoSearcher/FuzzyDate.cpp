@@ -51,7 +51,7 @@ FuzzyDate::FuzzyDate(YearType type, int year) :
 	{
 	case YearType::START:
 		_startDate = ::year{ year } / 1 / 1;
-		_endDate = ::year{ year }/ 3 / 31;
+		_endDate = ::year{ year }/ 4 / 30;
 		break;
 	case YearType::HALFWAY:
 		_startDate = ::year{ year } / 5 / 1;

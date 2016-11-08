@@ -70,7 +70,7 @@ namespace PhotoSearcher
             {
                 case YearType.Start:
                     startDate = new DateTime(year, 1, 1);
-                    endDate = new DateTime(year, 3, 31);
+                    endDate = new DateTime(year, 4, 30);
                     break;
                 case YearType.Halfway:
                     startDate = new DateTime(year, 5, 1);

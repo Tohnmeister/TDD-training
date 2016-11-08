@@ -13,68 +13,7 @@ private:
 	StringCalculator();
 	virtual ~StringCalculator();
 
-	// See far below if you find yourself having trouble splitting a string in C++.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	// The goal of this exercise is not to find a string split function in C++. Hence, it is provided.
 	std::vector<std::string> StringCalculator::split(const std::string& str, const std::string& regex)
 	{
 		std::regex re(regex);
@@ -83,6 +22,7 @@ private:
 			last;
 		return{ first, last };
 	}
+
 };
 
 #endif

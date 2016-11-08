@@ -3,9 +3,63 @@
 #include "gmock/gmock.h"
 #include "StringCalculator.h"
 
+using namespace std;
+
 class StringCalculatorTest : public ::testing::Test
 {
 };
+
+TEST_F(StringCalculatorTest, anEmptStringReturnsZero)
+{
+	EXPECT_EQ(0, StringCalculator::calculate(""));
+}
+
+TEST_F(StringCalculatorTest, aSingleNumberReturnsTheValue)
+{
+	EXPECT_EQ(1, StringCalculator::calculate("1"));
+}
+
+TEST_F(StringCalculatorTest, twoNumbersCommaDelimitedReturnsTheSum)
+{
+	EXPECT_EQ(3, StringCalculator::calculate("1,2"));
+}
+
+TEST_F(StringCalculatorTest, twoNumbersNewlineDelimitedReturnsTheSum)
+{
+	EXPECT_EQ(3, StringCalculator::calculate("1\n2"));
+}
+
+TEST_F(StringCalculatorTest, threeNumbersDelimitedEitherWayReturnsTheSum)
+{
+	EXPECT_EQ(6, StringCalculator::calculate("1,2\n3"));
+}
+
+TEST_F(StringCalculatorTest, negativeNumbersThrowAnException)
+{
+	EXPECT_THROW(StringCalculator::calculate("-1"), exception);
+}
+
+TEST_F(StringCalculatorTest, numbersGreaterThan1000AreIgnored)
+{
+	EXPECT_EQ(1003, StringCalculator::calculate("1000,1001\n3"));
+}
+
+TEST_F(StringCalculatorTest, aSingleCharDelimiterCanBeDefinedOnTheFirstLine)
+{
+	EXPECT_EQ(3, StringCalculator::calculate("//#1#2"));
+}
+
+TEST_F(StringCalculatorTest, aMultiCharDelimiterCanBeDefinedOnTheFirstLine)
+{
+	EXPECT_EQ(3, StringCalculator::calculate("//[###]1###2"));
+}
+
+TEST_F(StringCalculatorTest, manySingleOrMultiCharDelimitersCanBeDefined)
+{
+	EXPECT_EQ(6, StringCalculator::calculate("//[###][##]1###2##3"));
+}
+
+//- Many single or multi - char delimiters can be defined, e.g. "//[###][$$]" for '###' and '$$' as the delimiter
 
 void throwException()
 {

@@ -11,7 +11,7 @@ CruiseControl::~CruiseControl()
 
 void CruiseControl::tick()
 {
-	if (Hardware::getInstance().isCruiseControlOn() && Hardware::getInstance().getCruiseControlSpeed() < Hardware::getInstance().getCurrentSpeed())
+	if (Hardware::getInstance().isCruiseControlOn() && Hardware::getInstance().getCurrentSpeed() < Hardware::getInstance().getCruiseControlSpeed())
 	{
 		Hardware::getInstance().accelerate(true);
 	}

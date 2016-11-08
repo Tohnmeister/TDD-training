@@ -1,22 +1,27 @@
 #include <vector>
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
+#include "LeapYear.h"
 
-class LeapYearTest : public ::testing::Test
+TEST(LeapYearTest, 1isNotALeapYear)
 {
-};
+	EXPECT_FALSE(LeapYear::isLeapYear(1));
+}
 
-TEST_F(LeapYearTest, exampleTest)
+TEST(LeapYearTest, every4thYearIsALeapYear)
 {
-	EXPECT_EQ(1, 1); // Expect that the 2nd value matches the 1st (expected) value.
-	ASSERT_EQ(1, 1); // Same as expect, but it stops the test run if not equal.
+	EXPECT_TRUE(LeapYear::isLeapYear(4));
+	EXPECT_TRUE(LeapYear::isLeapYear(8));
+}
 
-	EXPECT_NE(1, 2); // Expect that two values are not equal.
-	ASSERT_NE(1, 2); // Same, but stops the test run if equal.
+TEST(LeapYearTest, every100thYearIsNotALeapYear)
+{
+	EXPECT_FALSE(LeapYear::isLeapYear(100));
+	EXPECT_FALSE(LeapYear::isLeapYear(200));
+}
 
-	EXPECT_TRUE(1 == 1); // Expect that some condition is true.
-	ASSERT_TRUE(1 == 1); // Same, but stops the test run if condition is not met.
-
-	EXPECT_FALSE(1 == 2); // Expect that some condition is false.
-	ASSERT_FALSE(1 == 2); // Same, but stops the test run if condition is met.
+TEST(LeapYearTest, every400thYearIsALeapYear)
+{
+	EXPECT_TRUE(LeapYear::isLeapYear(400));
+	EXPECT_TRUE(LeapYear::isLeapYear(800));
 }

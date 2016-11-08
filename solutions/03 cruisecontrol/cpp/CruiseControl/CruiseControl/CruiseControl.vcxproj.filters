@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="CruiseControl.h" />
+    <ClInclude Include="Hardware.h" />
+    <ClInclude Include="IHardware.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CruiseControl.cpp" />
+    <ClCompile Include="Hardware.cpp" />
+  </ItemGroup>
+</Project>

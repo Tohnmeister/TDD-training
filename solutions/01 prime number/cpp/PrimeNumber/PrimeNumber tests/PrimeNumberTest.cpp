@@ -1,22 +1,29 @@
 #include <vector>
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
+#include "PrimeNumber.h"
 
-class PrimeNumberTest : public ::testing::Test
+TEST(PrimeNumberTest, 1IsNotAPrimeNumber)
 {
-};
+	EXPECT_FALSE(PrimeNumber::isPrimeNumber(1));
+}
 
-TEST_F(PrimeNumberTest, exampleTest)
+TEST(PrimeNumberTest, 2IsAPrimeNumber)
 {
-	EXPECT_EQ(1, 1); // Expect that the 2nd value matches the 1st (expected) value.
-	ASSERT_EQ(1, 1); // Same as expect, but it stops the test run if not equal.
+	EXPECT_TRUE(PrimeNumber::isPrimeNumber(2));
+}
 
-	EXPECT_NE(1, 2); // Expect that two values are not equal.
-	ASSERT_NE(1, 2); // Same, but stops the test run if equal.
+TEST(PrimeNumberTest, 3IsAPrimeNumber)
+{
+	EXPECT_TRUE(PrimeNumber::isPrimeNumber(3));
+}
 
-	EXPECT_TRUE(1 == 1); // Expect that some condition is true.
-	ASSERT_TRUE(1 == 1); // Same, but stops the test run if condition is not met.
+TEST(PrimeNumberTest, 4IsNotAPrimeNumber)
+{
+	EXPECT_FALSE(PrimeNumber::isPrimeNumber(4));
+}
 
-	EXPECT_FALSE(1 == 2); // Expect that some condition is false.
-	ASSERT_FALSE(1 == 2); // Same, but stops the test run if condition is met.
+TEST(PrimeNumberTest, 15485863IsAPrimeNumber)
+{
+	EXPECT_TRUE(PrimeNumber::isPrimeNumber(15485863));
 }

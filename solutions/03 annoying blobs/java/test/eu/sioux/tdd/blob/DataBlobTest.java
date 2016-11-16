@@ -15,22 +15,20 @@ public class DataBlobTest
      * @throws java.lang.Exception
      */
     @Before
-    public void setUp() throws Exception
-    {
+    public void setUp() throws Exception {
     }
 
     /**
      * @throws java.lang.Exception
      */
     @After
-    public void tearDown() throws Exception
-    {
+    public void tearDown() throws Exception {
     }
 
     @Test
     public void test_data_initially_empty() throws Exception
     {
-        DataBlob blob = DataBlob.getBlob();
+        DataBlob blob = new DataBlob();
 
         assertTrue(blob.isEmpty());
     }

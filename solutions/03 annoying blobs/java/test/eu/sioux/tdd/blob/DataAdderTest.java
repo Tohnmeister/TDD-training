@@ -30,7 +30,7 @@ public class DataAdderTest
     @Test
     public void testData()
     {
-        DataAdder myDataAdder = new DataAdder();
+        DataAdder myDataAdder = new DataAdder(new DataBlobFactory().createDataBlob());
         myDataAdder.doSomeAdding();
     }
 }

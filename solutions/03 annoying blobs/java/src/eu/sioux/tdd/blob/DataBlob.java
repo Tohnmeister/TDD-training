@@ -4,10 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DataBlob {
-    public static DataBlob getBlob() {
-        return createOrReturnBlob();
-    }
-
     public void addData(int i) {
         data.add(i);
     }
@@ -16,19 +12,7 @@ public class DataBlob {
         return data.get(p).intValue();
     }
 
-    private static DataBlob createOrReturnBlob() {
-        if (theBlob == null) {
-            System.out.println("Creating Blob");
-            theBlob = new DataBlob();
-            for (int i = 0; i < 20; i++) {
-                theBlob.addData(i);
-            }
-        }
-
-        return theBlob;
-    }
-
-    private DataBlob() {
+    DataBlob() {
         data = new ArrayList<>();
     }
 

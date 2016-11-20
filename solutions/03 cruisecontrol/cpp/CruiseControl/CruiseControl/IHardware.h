@@ -3,7 +3,7 @@
 
 struct IHardware
 {
-	virtual ~IHardware() = 0 {}
+	virtual ~IHardware() = 0;
 
 	virtual void accelerate(bool accelerate) = 0;
 	virtual int getCurrentSpeed() const = 0;

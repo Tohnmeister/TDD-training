@@ -59,11 +59,14 @@ TEST_F(PhotoDeleterTest, deletePhotosShouldDeletePhotosMatchingFuzzyDate)
 	Color black(0, 0, 0);
 	Color white(255, 255, 255);
 	NiceMock<PhotoMock> photo1;
-	initializePhotoMock(photo1, 1, year{ 2017 } / 4 / 1, white, ContentType::CARS);
+	const auto date1 = year{ 2017 } / 4 / 1;
+	initializePhotoMock(photo1, 1, date1, white, ContentType::CARS);
 	NiceMock<PhotoMock> photo2;
-	initializePhotoMock(photo2, 2, year{ 2016 } / 3 / 1, white, ContentType::CARS);
+	const auto date2 = year{ 2016 } / 3 / 1;
+	initializePhotoMock(photo2, 2, date2, white, ContentType::CARS);
 	NiceMock<PhotoMock> photo3;
-	initializePhotoMock(photo3, 3, year{ 2017 } / 3 / 1, white, ContentType::CARS);
+	const auto date3 = year{ 2017 } / 3 / 1;
+	initializePhotoMock(photo3, 3, date3, white, ContentType::CARS);
 
 	vector<IPhoto*> allPhotos{ &photo1, &photo2, &photo3 };
 	ON_CALL(photoRepository, getPhotos()).WillByDefault(Return(allPhotos));

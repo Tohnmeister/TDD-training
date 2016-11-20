@@ -8,5 +8,6 @@
   <ItemGroup>
     <ClCompile Include="CruiseControl.cpp" />
     <ClCompile Include="Hardware.cpp" />
+    <ClInclude Include="IHardware.cpp" />
   </ItemGroup>
 </Project>

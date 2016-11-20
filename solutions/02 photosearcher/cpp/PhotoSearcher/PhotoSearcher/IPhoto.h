@@ -7,7 +7,7 @@
 
 struct IPhoto
 {
-	virtual ~IPhoto() = 0 {}
+	virtual ~IPhoto() = 0;
 
 	virtual int getId() const = 0;
 	virtual const date::year_month_day& getDate() const = 0;

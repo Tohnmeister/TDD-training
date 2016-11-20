@@ -12,6 +12,8 @@
   <ItemGroup>
     <ClCompile Include="FuzzyDate.cpp" />
     <ClCompile Include="Color.cpp" />
+    <ClInclude Include="IPhoto.cpp" />
+    <ClInclude Include="IPhotoRepository.cpp" />
     <ClCompile Include="PhotoDeleter.cpp" />
   </ItemGroup>
 </Project>

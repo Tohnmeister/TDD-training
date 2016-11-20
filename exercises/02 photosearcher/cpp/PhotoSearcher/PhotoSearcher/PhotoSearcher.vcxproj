@@ -18,6 +18,8 @@
   <ItemGroup>
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="FuzzyDate.cpp" />
+    <ClInclude Include="IPhoto.cpp" />
+    <ClInclude Include="IPhotoRepository.cpp" />
     <ClCompile Include="PhotoDeleter.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

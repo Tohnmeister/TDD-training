@@ -14,6 +14,7 @@
   <ItemGroup>
     <ClCompile Include="CruiseControl.cpp" />
     <ClCompile Include="Hardware.cpp" />
+    <ClInclude Include="IHardware.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D44C32A3-696A-43ED-8BC2-B12FAAA4C5D0}</ProjectGuid>

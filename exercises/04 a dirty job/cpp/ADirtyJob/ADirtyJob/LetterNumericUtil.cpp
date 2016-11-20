@@ -1,6 +1,6 @@
 #include "LetterNumericUtil.h"
 #include <cmath>
-#include <exception>
+#include <stdexcept>
 #include <cctype>
 
 using namespace std;
@@ -83,7 +83,7 @@ int LetterNumericUtil::numberFromLetters(const std::string& alphaNumeric)
 		else
 		{
 			string exceptionMessage = "Illegal character '" + string(1, letter) + "'";
-			throw exception(exceptionMessage.c_str());
+			throw invalid_argument(exceptionMessage.c_str());
 		}
 	}
 

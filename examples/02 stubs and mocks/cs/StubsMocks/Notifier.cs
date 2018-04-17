@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 namespace StubsMocks
 {
-    class Notifier
+    public class Notifier
     {
         private IList<IResponseHandler> responseHandlers = new List<IResponseHandler>();
 
-        public void Add(IResponseHandler subscriber)
+        public void Add(IResponseHandler handler)
         {
-            responseHandlers.Add(subscriber);
+            responseHandlers.Add(handler);
         }
 
         public void Publish(string message)

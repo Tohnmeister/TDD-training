@@ -57,6 +57,13 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NotifierTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StubsMocks\StubsMocks.csproj">
+      <Project>{c3470bdc-e9fd-45b6-902b-03e93353980f}</Project>
+      <Name>StubsMocks</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

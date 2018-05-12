@@ -29,3 +29,4 @@ ipch/
 *.tlog
 *.idb
 desktop.ini
+sqlite3/

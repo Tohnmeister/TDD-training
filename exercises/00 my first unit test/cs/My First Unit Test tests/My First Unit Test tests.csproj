@@ -58,6 +58,12 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\My First Unit Test\My First Unit Test.csproj">
+      <Project>{888b29d1-9d74-416d-9718-6b87de486cc6}</Project>
+      <Name>My First Unit Test</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

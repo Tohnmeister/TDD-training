@@ -58,6 +58,12 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ADirtyJob\ADirtyJob.csproj">
+      <Project>{c2df038f-bbad-42db-b2de-230b2081addb}</Project>
+      <Name>ADirtyJob</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

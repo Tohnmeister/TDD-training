@@ -1,8 +1,5 @@
 package eu.sioux.tdd.photosearcher;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
-import java.util.List;
 import java.util.Optional;
 
 public class PhotoDeleter {
@@ -14,12 +11,12 @@ public class PhotoDeleter {
 
     public void deletePhotos(FuzzyDate date) {
         // Use test-driven development to implement this method
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException();
     }
 
     public void deletePhotos(Optional<FuzzyDate> fuzzyDate, Optional<Color> color, Optional<ContentType> contentType) {
         // Use test-driven development to implement this method
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException();
     }
 
 }

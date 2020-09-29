@@ -30,3 +30,4 @@ ipch/
 *.idb
 desktop.ini
 sqlite3/
+**/vcs.xml

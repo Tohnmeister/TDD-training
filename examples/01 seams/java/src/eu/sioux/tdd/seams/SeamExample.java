@@ -1,48 +1,18 @@
 package eu.sioux.tdd.seams;
 
 public class SeamExample {
+    private TemperatureSensor temperatureSensor;
 
-
-
-
-
-
-    public void nonSeamExample() {
-        Helper.doSomething();
+    public SeamExample() {
+        temperatureSensor = new TemperatureSensor();
+        temperatureSensor.init();
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public void seamExample(Helper helper) {
-        helper.doSomething();
+    public boolean isAllowedOutside() {
+        if (temperatureSensor.readTemperature() >= 38.0) {
+            return false;
+        } else {
+            return true;
+        }
     }
-
 }
